@@ -1,0 +1,72 @@
+ssh-keygen
+pwd
+ls -la
+cd .ssh/
+ls -la
+cat id_rsa.pub 
+cat id_rsa
+cd
+pwd
+ls -la
+mkdir repogit
+cd repogit/
+ls
+sudo apt install git
+git clone git@github.com:sofiasartori/TP_AySO.git
+ls -la
+cd TP_AySO/
+ls -la
+pwd
+cat /etc/os-release
+man grep
+grep HOME_URL /etc/os-release
+grep home_url /etc/os-release
+grep -i Home_url /etc/os-release 
+whoami
+echo “Usuario=$(whoami)” > datos_usuario.txt
+ls -la
+cat datos_usuario.txt 
+git status
+git add datos_usuario.txt 
+git config --global user.email "sofiainessartori@hotmail.com"
+git config --global user.name "sofiasartori"
+git commit -m "ADD: agregado 1er ejercicio sobre datos_usuario.txt"
+git status
+cat /proc/cpuinfo
+grep "model name" /proc/cpuinfo 
+grep "model name" /proc/cpuinfo | head -n1
+grep "model name" /proc/cpuinfo | tail -n1
+grep "model name" /proc/cpuinfo | tail -n1 >> datos_usuario.txt
+cat datos_usuario.txt 
+git commit -m "feat: Anadiendo informacion de CPU"
+git add .
+git commit -m "feat: Anadiendo informacion de CPU"
+cat /etc/passwd
+man grep
+grep -v nologin /etc/passwd
+grep -v usr/sbin/nologin /etc/passwd
+grep -v usr/sbin/nologin /etc/passwd | head
+man sort
+grep -v usr/sbin/nologin /etc/passwd | head | sort -k 7
+grep -v usr/sbin/nologin /etc/passwd | head | sort -k 7 > lista_ordenada
+ls -la
+git add .
+git commit -m "ADD: Listado de usuarios ordenada"
+echo "comando para dump: tcpdump" > comando_dump_net
+ls -la
+cat comando_dump_net 
+git add .
+git commit -m "ADD: Comando para Capturar y analizar trafico de red"
+cat << FIN >> README.md 
+Alumno: Sofia
+Division: 116
+Turno: M
+FIN
+
+cat README.md 
+git add .
+git commit -m "feat:agrego datos al readme"
+cd 
+ls -la
+cd repogit/TP_AySO/
+history -a >> $HOME/.bash_history
